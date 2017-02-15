@@ -15,8 +15,3 @@ namespace WindowsFormsApplication1
             }
 
         }
-
-
-
-    }
-}
