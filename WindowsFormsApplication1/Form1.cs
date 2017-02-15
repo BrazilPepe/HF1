@@ -94,5 +94,10 @@ namespace WindowsFormsApplication1
         {
             textBox1.Text = ans.ToString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
