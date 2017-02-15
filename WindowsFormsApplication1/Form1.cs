@@ -82,6 +82,7 @@ namespace WindowsFormsApplication1
             ans = 0;
             num = 0;
             textBox1.Clear();
+
         }
 
         private void button16_Click(object sender, EventArgs e)
