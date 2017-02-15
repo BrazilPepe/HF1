@@ -25,8 +25,8 @@ namespace WindowsFormsApplication1
         {
 
         }
-        static double ans;
-        static double num;
+        public static double ans;
+        public static double num;
         private void button8_Click(object sender, EventArgs e)
         {
             //2-es szám
@@ -99,72 +99,63 @@ namespace WindowsFormsApplication1
             textBox1.Text = ans.ToString();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
-
-
+        public string count;
         public void számolás()
         {
+           
             switch (count)
             {
-                case 1:
+                case "+":
                     ans = num + float.Parse(textBox1.Text);
-                    textBox.Text = ans.ToString();                
+                    textBox1.Text = ans.ToString();                
                     break;
 
-                case 2:
+                case "-":
                     ans = num - float.Parse(textBox1.Text);
-                    textBox.Text = ans.ToString();
+                    textBox1.Text = ans.ToString();
                     break;
 
-                case 3:
+                case "*":
                     ans = num * float.Parse(textBox1.Text);
-                    textBox.Text = ans.ToString();                
+                    textBox1.Text = ans.ToString();                
                     break;
 
-                case 4:
+                case "/":
                     ans = num / float.Parse(textBox1.Text);
-                    textBox.Text = ans.ToString();
+                    textBox1.Text = ans.ToString();
                     break;
 
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox1.Focus();
+            textBox1.Text = num.ToString() + "+";
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox1.Focus();
+            textBox1.Text = num.ToString() + "-";
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox1.Focus();
+           textBox1.Text = num.ToString() + "*";
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox1.Focus();
+           textBox1.Text = num.ToString() + "/";
+
+        }
     }
-
-    private void button11_Click(object sender, EventArgs e)
-    {
-        textBox1.Clear();
-        textBox1.Focus();
-        count 1;
-        label1.Text = num.ToString() + "+";
-
-    }
-    private void button12_Click(object sender, EventArgs e)
-    {
-        textBox1.Clear();
-        textBox1.Focus();
-        count 2;
-        label1.Text = num.ToString() + "-";
-
-    }
-    private void button13_Click(object sender, EventArgs e)
-    {
-        textBox1.Clear();
-        textBox1.Focus();
-        count 3;
-        label1.Text = num.ToString() + "*";
-
-    }
-    private void button14_Click(object sender, EventArgs e)
-    {
-        textBox1.Clear();
-        textBox1.Focus();
-        count 4;
-        label1.Text = num.ToString() + "/";
-
-    }
-
-
 }

@@ -153,6 +153,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "+";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button5
             // 
@@ -162,6 +163,7 @@
             this.button5.TabIndex = 13;
             this.button5.Text = "-";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button12
             // 
@@ -171,6 +173,7 @@
             this.button12.TabIndex = 14;
             this.button12.Text = "*";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
@@ -180,6 +183,7 @@
             this.button13.TabIndex = 15;
             this.button13.Text = "/";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -246,7 +250,6 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
