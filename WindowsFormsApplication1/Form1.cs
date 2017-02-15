@@ -10,8 +10,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
+
+
     public partial class Form1 : Form
     {
+
+
         public Form1()
         {
             InitializeComponent();
@@ -99,5 +103,68 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+
+        public void számolás()
+        {
+            switch (count)
+            {
+                case 1:
+                    ans = num + float.Parse(textBox1.Text);
+                    textBox.Text = ans.ToString();                
+                    break;
+
+                case 2:
+                    ans = num - float.Parse(textBox1.Text);
+                    textBox.Text = ans.ToString();
+                    break;
+
+                case 3:
+                    ans = num * float.Parse(textBox1.Text);
+                    textBox.Text = ans.ToString();                
+                    break;
+
+                case 4:
+                    ans = num / float.Parse(textBox1.Text);
+                    textBox.Text = ans.ToString();
+                    break;
+
+            }
+        }
     }
+
+    private void button11_Click(object sender, EventArgs e)
+    {
+        textBox1.Clear();
+        textBox1.Focus();
+        count 1;
+        label1.Text = num.ToString() + "+";
+
+    }
+    private void button12_Click(object sender, EventArgs e)
+    {
+        textBox1.Clear();
+        textBox1.Focus();
+        count 2;
+        label1.Text = num.ToString() + "-";
+
+    }
+    private void button13_Click(object sender, EventArgs e)
+    {
+        textBox1.Clear();
+        textBox1.Focus();
+        count 3;
+        label1.Text = num.ToString() + "*";
+
+    }
+    private void button14_Click(object sender, EventArgs e)
+    {
+        textBox1.Clear();
+        textBox1.Focus();
+        count 4;
+        label1.Text = num.ToString() + "/";
+
+    }
+
+
 }
