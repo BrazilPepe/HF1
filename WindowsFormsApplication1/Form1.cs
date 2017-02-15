@@ -21,12 +21,15 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+       float ans;
+       float num;
+        int count;
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-        public static double ans;
-        public static double num;
+       
         private void button8_Click(object sender, EventArgs e)
         {
             //2-es szám
@@ -99,31 +102,33 @@ namespace WindowsFormsApplication1
             textBox1.Text = ans.ToString();
         }
 
-
-        public string count;
+   
         public void számolás()
         {
            
             switch (count)
             {
-                case "+":
+                case 1:
                     ans = num + float.Parse(textBox1.Text);
                     textBox1.Text = ans.ToString();                
                     break;
 
-                case "-":
+                case 2:
                     ans = num - float.Parse(textBox1.Text);
                     textBox1.Text = ans.ToString();
                     break;
 
-                case "*":
+                case 3:
                     ans = num * float.Parse(textBox1.Text);
                     textBox1.Text = ans.ToString();                
                     break;
 
-                case "/":
+                case 4:
                     ans = num / float.Parse(textBox1.Text);
                     textBox1.Text = ans.ToString();
+                    break;
+
+                default:
                     break;
 
             }
@@ -131,29 +136,37 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            num = float.Parse(textBox1.Text);
             textBox1.Clear();
             textBox1.Focus();
+            count 1;
             textBox1.Text = num.ToString() + "+";
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            num = float.Parse(textBox1.Text);
             textBox1.Clear();
             textBox1.Focus();
+            count 2;
             textBox1.Text = num.ToString() + "-";
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
+            num = float.Parse(textBox1.Text);
             textBox1.Clear();
             textBox1.Focus();
+            count 3;
            textBox1.Text = num.ToString() + "*";
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
+            num = float.Parse(textBox1.Text);
             textBox1.Clear();
             textBox1.Focus();
+            count 4;
            textBox1.Text = num.ToString() + "/";
 
         }
